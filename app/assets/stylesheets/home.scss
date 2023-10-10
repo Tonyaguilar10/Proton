@@ -5,26 +5,125 @@
   // background-image: url('BG.jpg');
   // background-size: cover, 450px;
   // background-repeat: no-repeat;
-  background-image: linear-gradient(176deg, #6ad7c5 1%, #2a9173 33% , #212126 80%);
+  background-image: linear-gradient(176deg, #6ad7c595 1%, #2a917484 25% , #21212629 80%);
   height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    p{
-      /* Pro-Ton */
+  @media (max-width: 768px){
+    .logo {
+      height: 35px;
       position: absolute;
-      width: 111px;
-      height: 26px;
-      left: calc(50% - 111px/2 - 450.5px);
-      top: 68px;
-
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 300;
-      font-size: 20px;
-      line-height: 24px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: #FFFFFF;
+      top: 15%;
+      animation: rotateIcon1 2s ease-in-out 0s 1 normal forwards;
     }
+
+    .logo2 {
+      height: 35px;
+      position: absolute;
+      top: 15%;
+      left: 31%;
+      opacity: 0; /* Initial opacity is set to 0 */
+      visibility: hidden; /* Initial visibility is hidden */
+      animation: moveAndRotateIcon2 1s ease-in 1.9s 1 normal forwards;
+    }
+
+    .logo3 {
+      height: 25px;
+      opacity: 0; /* Initial opacity is set to 0 */
+      position: absolute;
+      top: 35%;
+      visibility: hidden; /* Initial visibility is hidden */
+      animation: fadeInIcon3 1s ease-in 2s 1 normal forwards;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1024px){
+    .logo {
+      height: 35px;
+      position: absolute;
+      top: 15%;
+      animation: rotateIcon1 2s ease-in-out 0s 1 normal forwards;
+    }
+
+    .logo2 {
+      height: 35px;
+      position: absolute;
+      top: 15%;
+      left: 41%;
+      opacity: 0; /* Initial opacity is set to 0 */
+      visibility: hidden; /* Initial visibility is hidden */
+      animation: moveAndRotateIcon2 1s ease-in 1.9s 1 normal forwards;
+    }
+
+    .logo3 {
+      height: 25px;
+      opacity: 0; /* Initial opacity is set to 0 */
+      position: absolute;
+      top: 35%;
+      visibility: hidden; /* Initial visibility is hidden */
+      animation: fadeInIcon3 1s ease-in 2s 1 normal forwards;
+    }
+  }
+  @media (min-width: 1024px) {
+    .logo {
+      height: 35px;
+      position: absolute;
+      top: 15%;
+      animation: rotateIcon1 2s ease-in-out 0s 1 normal forwards;
+    }
+
+    .logo2 {
+      height: 35px;
+      position: absolute;
+      top: 15%;
+      left: 45%;
+      opacity: 0; /* Initial opacity is set to 0 */
+      visibility: hidden; /* Initial visibility is hidden */
+      animation: moveAndRotateIcon2 1s ease-in 1.9s 1 normal forwards;
+    }
+
+    .logo3 {
+      height: 25px;
+      opacity: 0; /* Initial opacity is set to 0 */
+      position: absolute;
+      top: 35%;
+      visibility: hidden; /* Initial visibility is hidden */
+      animation: fadeInIcon3 1s ease-in 2s 1 normal forwards;
+    }
+  }
+
+  @keyframes rotateIcon1 {
+    0% {
+
+      transform: rotate(-180deg);
+    }
+
+    100% {
+
+      transform: translateX(-325%);
+    }
+  }
+
+  @keyframes moveAndRotateIcon2 {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      visibility: visible; /* Make the icon visible when animation starts */
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeInIcon3 {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      visibility: visible; /* Make the icon visible when animation starts */
+      opacity: 1;
+    }
+  }
 }
 /* Styles for smartphones */
 /* Your styles for small screens go here */
@@ -46,6 +145,7 @@
 
     &:hover{
       opacity: 100%;
+      animation-play-state: paused;
     }
 
     ~ .text { /* The adjacent sibling combinator selects the next sibling with class .text */
@@ -66,6 +166,7 @@
       text-transform: uppercase;
       color: #FFFFFF;
     }
+    animation: moveIcons 5s infinite alternate;
   }
   .icon-2{
     width: 9%;
@@ -76,6 +177,7 @@
 
     &:hover{
       opacity: 100%;
+      animation-play-state: paused;
     }
 
     ~ .text2 { /* The adjacent sibling combinator selects the next sibling with class .text */
@@ -96,6 +198,7 @@
       text-transform: uppercase;
       color: #FFFFFF;
     }
+    animation: moveIcons2 5.5s infinite alternate;
   }
   .icon-3{
     width: 8.5%;
@@ -106,6 +209,7 @@
 
     &:hover{
       opacity: 100%;
+      animation-play-state: paused;
     }
 
     ~ .text3 { /* The adjacent sibling combinator selects the next sibling with class .text */
@@ -126,6 +230,7 @@
       text-transform: uppercase;
       color: #FFFFFF;
     }
+    animation: moveIcons2 4.5s infinite alternate;
   }
 }
 /* Styles for tablets */
@@ -147,6 +252,7 @@
 
     &:hover{
       opacity: 100%;
+      animation-play-state: paused;
     }
 
     ~ .text { /* The adjacent sibling combinator selects the next sibling with class .text */
@@ -167,6 +273,7 @@
       text-transform: uppercase;
       color: #FFFFFF;
     }
+    animation: moveIcons 5s infinite alternate;
   }
   .icon-2{
     width: 8%;
@@ -177,6 +284,7 @@
 
     &:hover{
       opacity: 100%;
+      animation-play-state: paused;
     }
 
     ~ .text2 { /* The adjacent sibling combinator selects the next sibling with class .text */
@@ -197,6 +305,7 @@
       text-transform: uppercase;
       color: #FFFFFF;
     }
+    animation: moveIcons2 5.5s infinite alternate;
   }
   .icon-3{
     width: 7.5%;
@@ -207,6 +316,7 @@
 
     &:hover{
       opacity: 100%;
+      animation-play-state: paused;
     }
 
     ~ .text3 { /* The adjacent sibling combinator selects the next sibling with class .text */
@@ -227,6 +337,7 @@
       text-transform: uppercase;
       color: #FFFFFF;
     }
+    animation: moveIcons2 5s infinite alternate;
   }
 }
 /* Styles for computers */
@@ -238,12 +349,6 @@
     position: absolute;
     left: 45%;
     top: 400px;
-
-    &:hover{
-      .icon-1{
-        opacity: 100%;
-      }
-    }
   }
 
   .icon-1{
