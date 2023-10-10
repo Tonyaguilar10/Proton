@@ -1,6 +1,386 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-h1 {
-color: #000fff;
+.video{
+  // background-image: url('BG.jpg');
+  // background-size: cover, 450px;
+  // background-repeat: no-repeat;
+  background-image: linear-gradient(176deg, #6ad7c5 1%, #2a9173 33% , #212126 80%);
+  height: 450px;
+
+    p{
+      /* Pro-Ton */
+      position: absolute;
+      width: 111px;
+      height: 26px;
+      left: calc(50% - 111px/2 - 450.5px);
+      top: 68px;
+
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 24px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+    }
 }
+/* Styles for smartphones */
+/* Your styles for small screens go here */
+@media (max-width: 768px) {
+  .profile-picture{
+    width: 25%;
+    border-radius: 50%;
+    position: absolute;
+    left: 35%;
+    top: 400px;
+  }
+
+  .icon-1{
+    width: 8%;
+    opacity: 40%;
+    position: absolute;
+    left: 25.5%;
+    top: 370px;
+
+    &:hover{
+      opacity: 100%;
+    }
+
+    ~ .text { /* The adjacent sibling combinator selects the next sibling with class .text */
+      display: none; /* Initially hide the text */
+      position: absolute;
+      left: 12%;
+      top: 380px;
+    }
+
+    &:hover ~ .text {
+      display: block; /* Display the text when the icon is hovered */
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 24px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+    }
+  }
+  .icon-2{
+    width: 9%;
+    opacity: 40%;
+    position: absolute;
+    left: 65%;
+    top: 420px;
+
+    &:hover{
+      opacity: 100%;
+    }
+
+    ~ .text2 { /* The adjacent sibling combinator selects the next sibling with class .text */
+      display: none; /* Initially hide the text */
+      position: absolute;
+      left: 65%;
+      top: 475px;
+    }
+
+    &:hover ~ .text2 {
+      display: block; /* Display the text when the icon is hovered */
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 24px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+    }
+  }
+  .icon-3{
+    width: 8.5%;
+    opacity: 40%;
+    position: absolute;
+    left: 40%;
+    top: 538px;
+
+    &:hover{
+      opacity: 100%;
+    }
+
+    ~ .text3 { /* The adjacent sibling combinator selects the next sibling with class .text */
+      display: none; /* Initially hide the text */
+      position: absolute;
+      left: 22%;
+      top: 548px;
+    }
+
+    &:hover ~ .text3 {
+      display: block; /* Display the text when the icon is hovered */
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 24px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+    }
+  }
+}
+/* Styles for tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Your styles for tablets go here */
+  .profile-picture{
+    width: 18%;
+    border-radius: 50%;
+    position: absolute;
+    left: 45%;
+    top: 385px;
+  }
+  .icon-1{
+    width: 7%;
+    opacity: 40%;
+    position: absolute;
+    left: 31.5%;
+    top: 342px;
+
+    &:hover{
+      opacity: 100%;
+    }
+
+    ~ .text { /* The adjacent sibling combinator selects the next sibling with class .text */
+      display: none; /* Initially hide the text */
+      position: absolute;
+      left: 20%;
+      top: 365px;
+    }
+
+    &:hover ~ .text {
+      display: block; /* Display the text when the icon is hovered */
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 24px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+    }
+  }
+  .icon-2{
+    width: 8%;
+    opacity: 40%;
+    position: absolute;
+    left: 70%;
+    top: 410px;
+
+    &:hover{
+      opacity: 100%;
+    }
+
+    ~ .text2 { /* The adjacent sibling combinator selects the next sibling with class .text */
+      display: none; /* Initially hide the text */
+      position: absolute;
+      left: 80%;
+      top: 430px;
+    }
+
+    &:hover ~ .text2 {
+      display: block; /* Display the text when the icon is hovered */
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 24px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+    }
+  }
+  .icon-3{
+    width: 7.5%;
+    opacity: 40%;
+    position: absolute;
+    left: 40%;
+    top: 580px;
+
+    &:hover{
+      opacity: 100%;
+    }
+
+    ~ .text3 { /* The adjacent sibling combinator selects the next sibling with class .text */
+      display: none; /* Initially hide the text */
+      position: absolute;
+      left: 25%;
+      top: 600px;
+    }
+
+    &:hover ~ .text3 {
+      display: block; /* Display the text when the icon is hovered */
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 24px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+    }
+  }
+}
+/* Styles for computers */
+@media (min-width: 1024px) {
+  /* Your styles for larger screens go here */
+  .profile-picture{
+    width: 12%;
+    border-radius: 50%;
+    position: absolute;
+    left: 45%;
+    top: 400px;
+
+    &:hover{
+      .icon-1{
+        opacity: 100%;
+      }
+    }
+  }
+
+  .icon-1{
+    width: 4.5%;
+    opacity: 40%;
+    position: absolute;
+    left: 35%;
+    top: 342px;
+
+    &:hover{
+      opacity: 100%;
+      animation-play-state: paused;
+    }
+
+    ~ .text { /* The adjacent sibling combinator selects the next sibling with class .text */
+      display: none; /* Initially hide the text */
+      position: absolute;
+      left: 28%;
+      top: 362px;
+    }
+
+    &:hover ~ .text {
+      display: block; /* Display the text when the icon is hovered */
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 24px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+    }
+    animation: moveIcons 5s infinite alternate;
+  }
+  .icon-2{
+    width: 5.5%;
+    opacity: 40%;
+    position: absolute;
+    left: 62%;
+    top: 425px;
+
+    &:hover{
+      opacity: 100%;
+      animation-play-state: paused;
+    }
+
+    ~ .text2 { /* The adjacent sibling combinator selects the next sibling with class .text */
+      display: none; /* Initially hide the text */
+      position: absolute;
+      left: 70%;
+      top: 450px;
+    }
+
+    &:hover ~ .text2 {
+      display: block; /* Display the text when the icon is hovered */
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 24px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+    }
+    animation: moveIcons2 5.5s infinite alternate;
+  }
+  .icon-3{
+    width: 5%;
+    opacity: 40%;
+    position: absolute;
+    left: 40%;
+    top: 580px;
+
+    &:hover{
+      opacity: 100%;
+      animation-play-state: paused;
+    }
+
+    ~ .text3 { /* The adjacent sibling combinator selects the next sibling with class .text */
+      display: none; /* Initially hide the text */
+      position: absolute;
+      left: 31%;
+      top: 610px;
+    }
+
+    &:hover ~ .text3 {
+      display: block; /* Display the text when the icon is hovered */
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 24px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+    }
+    animation: moveIcons3 4.5s infinite alternate;
+  }
+}
+
+@keyframes moveIcons {
+  from {
+    transform: translate(-15%, -15%);
+  }
+  to {
+    transform: translate(15%, 15%);
+  }
+}
+
+@keyframes moveIcons2 {
+  from {
+    transform: translate(15%, -15%);
+  }
+  to {
+    transform: translate(-15%, 15%);
+  }
+}
+
+@keyframes moveIcons3 {
+  from {
+    transform: translate(15%, 15%);
+  }
+  to {
+    transform: translate(-15%, -15%);
+  }
+}
+
+/* filter: blur(22.5px);
+//transform: rotate(-180deg);
+
+// /* Ellipse 9 */
+
+// position: absolute;
+// width: 180px;
+// height: 180px;
+// left: 550px;
+// top: 664px;
+
+// background: #2A3837;
+// mix-blend-mode: lighten; */
