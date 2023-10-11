@@ -1,3 +1,18 @@
 // Place all the styles related to the Experiences controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.programing{
+  margin-bottom: 20px;
+  @media (max-width: 768px){
+    margin-top: 50px;
+  }
+}
+.programing-icons{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .medium-icon{
+    width: 50px;
+    margin: 10px;
+  }
+}

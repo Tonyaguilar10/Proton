@@ -90,7 +90,7 @@
       width: 15%;
       border-radius: 50%;
       position: absolute;
-      left: 40%;
+      left: 42.5%;
       top: 95px;
     }
 
@@ -168,7 +168,7 @@
       ~ .hello { /* The adjacent sibling combinator selects the next sibling with class .text */
         display: none; /* Initially hide the text */
         position: absolute;
-        left: 84%;
+        right: 14%;
         top: 40px;
       }
 
@@ -209,7 +209,7 @@
       margin-bottom: 3px;
       margin-top: 3px;
       padding-top: 2px;
-    padding-bottom: 2px;
+      padding-bottom: 2px;
     }
 
     h4{
@@ -371,6 +371,12 @@
   .general-edu{
     margin-top: 100px;
     margin-right: 5%;
+
+    .information li{
+      font-size: 11px;
+      margin-left: 15px;
+      text-transform: none;
+    }
 
     @media (max-width: 768px){
       margin-top: 50px;
