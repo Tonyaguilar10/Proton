@@ -8,6 +8,27 @@
   display: flex;
   flex-direction: column;
 
+  .speach{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 45px;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-wrap: wrap;
+    h3 {
+      width: 55%;
+      text-align: justify;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 24px;
+      letter-spacing: 0.1em;
+      color: #FFFFFF;
+    }
+  }
+
   .nav-bar{
 
     ul {
@@ -59,37 +80,113 @@
 
   @media (max-width: 768px) {
     .profile-picture-pages{
-      width: 20%;
+      display: none;
+      ~ .hello {
+        display: none;
+      }
+    }
+
+    .profile-picture-small{
+      width: 15%;
       border-radius: 50%;
       position: absolute;
       left: 40%;
-      top: 150px;
+      top: 95px;
+    }
+
+    .speach{
+      margin-top: 85px;
+      h3 {
+        width: 70%;
+        text-align: justify;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 11px;
+        line-height: 24px;
+        letter-spacing: 0.1em;
+        color: #FFFFFF;
+      }
+    }
+
+    .general2{
+      align-items:center;
+      flex-direction: column;
     }
   }
   @media (min-width: 768px) and (max-width: 1024px) {
-    /* Your styles for tablets go here */
+    .profile-picture-small{
+      display: none;
+    }
     .profile-picture-pages{
-      width: 12%;
+      width: 50px;
       border-radius: 50%;
       position: absolute;
-      left: 45%;
-      top: 135px;
+      left: 85%;
+      margin: 35px;
+      opacity: 40%;
+
+      &:hover{
+        opacity: 100%;
+      }
+
+      ~ .hello {
+        display: none; /* Initially hide the text */
+        position: absolute;
+        left: 84%;
+        top: 40px;
+      }
+
+      &:hover ~ .hello {
+        display: block; /* Display the text when the icon is hovered */
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 10px;
+        line-height: 24px;
+        letter-spacing: 0.1em;
+        color: #FFFFFF;
+      }
     }
   }
   @media (min-width: 1024px) {
-    /* Your styles for larger screens go here */
+    .profile-picture-small{
+      display: none;
+    }
     .profile-picture-pages{
-      width: 8%;
+      width: 50px;
       border-radius: 50%;
       position: absolute;
-      left: 45%;
-      top: 150px;
+      left: 85%;
+      margin: 35px;
+      opacity: 40%;
+
+      &:hover{
+        opacity: 100%;
+      }
+
+      ~ .hello { /* The adjacent sibling combinator selects the next sibling with class .text */
+        display: none; /* Initially hide the text */
+        position: absolute;
+        left: 84%;
+        top: 40px;
+      }
+
+      &:hover ~ .hello {
+        display: block; /* Display the text when the icon is hovered */
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 10px;
+        line-height: 24px;
+        letter-spacing: 0.1em;
+        color: #FFFFFF;
+      }
     }
   }
 
   .general2{
     display: flex;
-    align-items: flex-start;
     justify-content: space-evenly;
 
     ul{
@@ -109,8 +206,10 @@
       display: flex;
       flex-direction: row;
       align-items: center;
-      margin-bottom: 5px;
-      margin-top: 5px;
+      margin-bottom: 3px;
+      margin-top: 3px;
+      padding-top: 2px;
+    padding-bottom: 2px;
     }
 
     h4{
@@ -128,11 +227,19 @@
   }
 
   .general-info{
-    margin-top: 148px;
-    margin-left: 0px;
+    margin-top: 100px;
+    margin-left: 5%;
     padding-right: 12%;
     border-right: 1px solid white;
     align-items: center;
+
+    @media (max-width: 768px){
+      border-right:none;
+      margin-top: 50px;
+      padding-right: 0px;
+      margin-left: 5%;
+      margin-right: 5%;
+    }
 
     i{
       margin-right: 25px;
@@ -142,7 +249,7 @@
       font-optical-sizing: 24;
     }
 
-    .language-skill {
+    .skill {
       display: flex;
       flex-direction: column;
       margin-bottom: 20px;
@@ -164,6 +271,27 @@
       height: 10px;
       width: 50%;
       animation: fillBar50 4s ease-in-out forwards;
+    }
+
+    .loading-bar-90{
+      background-color: #2a9174;
+      height: 10px;
+      width: 90%;
+      animation: fillBar90 4s ease-in-out forwards;
+    }
+
+    .loading-bar-80{
+      background-color: #2a9174;
+      height: 10px;
+      width: 80%;
+      animation: fillBar80 4s ease-in-out forwards;
+    }
+
+    .loading-bar-75{
+      background-color: #2a9174;
+      height: 10px;
+      width: 75%;
+      animation: fillBar75 4s ease-in-out forwards;
     }
 
     @keyframes fillBar {
@@ -188,7 +316,40 @@
       }
     }
 
-    .language-name {
+    @keyframes fillBar90 {
+      0% {
+        width: 0;
+        background-color: #ccc;
+      }
+      100% {
+        width: 90%;
+        background-color: #2a9174;
+      }
+    }
+
+    @keyframes fillBar80 {
+      0% {
+        width: 0;
+        background-color: #ccc;
+      }
+      100% {
+        width: 80%;
+        background-color: #2a9174;
+      }
+    }
+
+    @keyframes fillBar75 {
+      0% {
+        width: 0;
+        background-color: #ccc;
+      }
+      100% {
+        width: 75%;
+        background-color: #2a9174;
+      }
+    }
+
+    .skill-name {
       font-family: 'Inter';
       font-style: normal;
       font-weight: 300;
@@ -208,6 +369,29 @@
   }
 
   .general-edu{
-    margin-top: 148px;
+    margin-top: 100px;
+    margin-right: 5%;
+
+    @media (max-width: 768px){
+      margin-top: 50px;
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+
+    h3{
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 13.5px;
+      line-height: 24px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-align: center;
+      color: #FFFFFF;
+    }
+
+    .dash{
+      border-bottom: 1px solid white;
+    }
   }
 }
