@@ -1,3 +1,213 @@
 // Place all the styles related to the Infos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.general{
+
+  background-image: linear-gradient(176deg, #6ad7c595 1%, #2a917484 25% , #21212629 80%);
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+
+  .nav-bar{
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 35px;
+      margin-left: 53px;
+      display: inline-flex;
+    }
+
+    .nav-li a {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 24px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      text-decoration: none;
+      margin-right: 5px;
+      margin-left: 5px;
+      opacity: 50%;
+      &:hover{
+        opacity: 100%;
+      }
+    }
+
+    li {
+      border-right: 1px solid #FFFFFF;
+      margin-right: 2px;
+      margin-left: 2px;
+    }
+
+    .nav-logo a {
+      text-decoration: none;
+      opacity: 50%;
+
+      &:hover{
+        opacity: 100%;
+      }
+    }
+
+    .home_logo {
+      height: 15px;
+      margin-right: 10px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .profile-picture-pages{
+      width: 20%;
+      border-radius: 50%;
+      position: absolute;
+      left: 40%;
+      top: 150px;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    /* Your styles for tablets go here */
+    .profile-picture-pages{
+      width: 12%;
+      border-radius: 50%;
+      position: absolute;
+      left: 45%;
+      top: 135px;
+    }
+  }
+  @media (min-width: 1024px) {
+    /* Your styles for larger screens go here */
+    .profile-picture-pages{
+      width: 8%;
+      border-radius: 50%;
+      position: absolute;
+      left: 45%;
+      top: 150px;
+    }
+  }
+
+  .general2{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+
+    ul{
+      list-style-type: none;
+      align-items: center;
+    }
+
+    li{
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 24px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 5px;
+      margin-top: 5px;
+    }
+
+    h4{
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 24px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-align: center;
+      color: #FFFFFF;
+    }
+
+  }
+
+  .general-info{
+    margin-top: 148px;
+    margin-left: 0px;
+    padding-right: 12%;
+    border-right: 1px solid white;
+    align-items: center;
+
+    i{
+      margin-right: 25px;
+      color: #FFFFFF;
+      fill: 1;
+      font-weight: 300;
+      font-optical-sizing: 24;
+    }
+
+    .language-skill {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+    .original-bar{
+      background-color: #ccc;
+      height: 10px;
+      width: 100%;
+    }
+    .loading-bar {
+      background-color: #2a9174;
+      height: 10px;
+      width: 100%;
+      animation: fillBar 4s ease-in-out forwards;
+    }
+
+    .loading-bar-50{
+      background-color: #2a9174;
+      height: 10px;
+      width: 50%;
+      animation: fillBar50 4s ease-in-out forwards;
+    }
+
+    @keyframes fillBar {
+      0% {
+        width: 0;
+        background-color: #ccc;
+      }
+      100% {
+        width: 100%;
+        background-color: #2a9174;
+      }
+    }
+
+    @keyframes fillBar50 {
+      0% {
+        width: 0;
+        background-color: #ccc;
+      }
+      100% {
+        width: 50%;
+        background-color: #2a9174;
+      }
+    }
+
+    .language-name {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 24px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+    }
+
+    .small-icon{
+      width: 22px;
+      margin-right: 25px;
+      filter: invert(100%) grayscale(100%);
+    }
+
+  }
+
+  .general-edu{
+    margin-top: 148px;
+  }
+}

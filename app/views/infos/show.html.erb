@@ -1,2 +1,60 @@
-<h1>Infos#show</h1>
-<p>Find me in app/views/infos/show.html.erb</p>
+<div class="general">
+  <div class="nav-bar">
+    <ul>
+      <li class="nav-logo"><%= link_to root_path do%><%= image_tag "Pro Ton Logo 2", class: "home_logo"%><%end %></li>
+      <li class="nav-li"><%= link_to 'Work Experience', experience_path%></li>
+      <li class="nav-li"><%= link_to 'Projects', project_path%></li>
+    </ul>
+  </div>
+  <%= image_tag "photo_info.JPG", class: "profile-picture-pages" %>
+  <div class="general2">
+  <div class="general-info">
+    <h4>About me</h4>
+    <br>
+    <ul>
+      <li><i class="material-symbols-outlined"> person_raised_hand </i>Jose Antonio Aguilar Miranda</li>
+      <li><i class="material-symbols-outlined"> stream_apps </i>+503 7748 3164</li>
+      <li><i class="material-symbols-outlined"> email </i>Jose.aguilar.miranda@gmail.com</li>
+      <li><i class="material-symbols-outlined"> cake </i>01 October 1992</li>
+      <li><%= image_tag "linkedin.png", class: "small-icon" %>jose-aguilar92</li>
+      <li><%= image_tag "github.png", class: "small-icon" %>Tonyaguilar10</li>
+    </ul>
+    <h4>Languages</h4>
+    <div class="language-skill">
+      <div class="language-name">Spanish</div>
+      <div class="original-bar">
+      <div class="loading-bar loading-bar-100"></div>
+      </div>
+    </div>
+
+    <div class="language-skill">
+      <div class="language-name">English</div>
+      <div class="original-bar">
+        <div class="loading-bar loading-bar-100"></div>
+      </div>
+    </div>
+
+    <div class="language-skill">
+      <div class="language-name">French</div>
+      <div class="original-bar">
+      <div class="loading-bar-50"></div>
+      </div>
+    </div>
+
+    <div class="language-skill">
+      <div class="language-name">Sign language</div>
+      <div class="original-bar">
+      <div class="loading-bar-50"></div>
+      </div>
+    </div>
+
+  </div>
+  <div class="general-edu">
+    <h4>My Education</h4>
+    <br>
+    <ul>
+      <li>Le Wagon</li>
+    </ul>
+  </div>
+  </div>
+</div>

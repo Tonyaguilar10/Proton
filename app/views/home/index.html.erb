@@ -1,4 +1,4 @@
-<div class="video">
+<div class="animation">
   <%= image_tag "Asset 1.png", class: "logo" %>
   <%# <%= image_tag "Asset 3.png", class: "logo2" %>
   <%# <%= image_tag "Logo-word2.png", class: "logo2"%>
@@ -6,11 +6,17 @@
   <%= image_tag "Asset 4.png", class: "logo3" %>
 </div>
 <div-quarks>
-     <%= image_tag "About icon.png", class: "icon-1" %>
-     <span class="text">About</span>
+  <%= link_to about_path do %>
+    <%= image_tag "About icon.png", class: "icon-1" %>
+    <span class="text">About</span>
+  <% end %>
   <%= image_tag "photo_info.JPG", class: "profile-picture" %>
-     <%= image_tag "Experience icon.png", class: "icon-2" %>
-     <span class="text2">Experience</span>
-  <%= image_tag "Projects icon.png", class: "icon-3" %>
+  <%= link_to experience_path do %>
+    <%= image_tag "Experience icon.png", class: "icon-2" %>
+    <span class="text2">Experience</span>
+  <% end %>
+  <%= link_to project_path do %>
+    <%= image_tag "Projects icon.png", class: "icon-3" %>
      <span class="text3">Projects</span>
+  <% end %>
 </div-quarks>
