@@ -79,6 +79,15 @@
   }
 
   @media (max-width: 768px) {
+
+    .nav-bar ul{
+      margin-left: 35px;
+      display: flex;
+    }
+
+    .nav-bar li{
+      text-align: center;
+    }
     .profile-picture-pages{
       display: none;
       ~ .hello {
@@ -91,7 +100,7 @@
       border-radius: 50%;
       position: absolute;
       left: 42.5%;
-      top: 95px;
+      top: 125px;
     }
 
     .speach{
@@ -371,7 +380,7 @@
   .general-edu{
     margin-top: 100px;
     margin-right: 5%;
-
+    margin-left: 5%;
     .information li{
       font-size: 11px;
       margin-left: 15px;
@@ -382,6 +391,10 @@
       margin-top: 50px;
       margin-left: 5%;
       margin-right: 5%;
+    }
+
+    ul{
+      padding-left: 0rem;
     }
 
     h3{
