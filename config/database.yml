@@ -84,3 +84,5 @@ production:
   database: Proton_production
   username: Proton
   password: <%= ENV['PROTON_DATABASE_PASSWORD'] %>
+  host: <%= ENV['DATABASE_URL'].split('@').last.split(':').first if ENV['DATABASE_URL'] %>
+  pool: <%= ENV['DB_POOL'] || 5 %>
